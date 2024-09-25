@@ -4,12 +4,10 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	fbClockOneSecond : FB_CLOCK;
-	fbClock500ms : FB_CLOCK;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fbClockOneSecond(TIME_ON:=T#500MS, TIME_OFF:=T#500MS, OUT_CLK=>);
-fbClock500ms(TIME_ON:=T#250MS, TIME_OFF:=T#250MS, OUT_CLK=>);
 ]]></ST>
     </Implementation>
   </POU>
