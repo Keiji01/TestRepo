@@ -1,15 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
   <POU Name="MAIN" Id="{0f877463-314e-40d4-85f8-7b3707f59d66}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	fbClockOneSecond : FB_CLOCK;
+	fbClock250ms	 : FB_CLOCK;
 	fbClock500ms 	 : FB_CLOCK;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fbClockOneSecond(TIME_ON:=T#500MS, TIME_OFF:=T#500MS, OUT_CLK=>);
+fbClock250ms(TIME_ON:=T#125MS, TIME_OFF:=T#125MS, OUT_CLK=>);
 fbClock500ms(TIME_ON:=T#250MS, TIME_OFF:=T#250MS, OUT_CLK=>);]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="3" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
