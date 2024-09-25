@@ -86,6 +86,9 @@
     <PlaceholderResolution Include="Tc2_System">
       <Resolution>Tc2_System, * (Beckhoff Automation GmbH)</Resolution>
     </PlaceholderResolution>
+    <PlaceholderResolution Include="Tc3_Module">
+      <Resolution>Tc3_Module, * (Beckhoff Automation GmbH)</Resolution>
+    </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
